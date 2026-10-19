@@ -1,0 +1,461 @@
+# The music the app's library offers: every track free to put in a video, posted anywhere, earning
+# money, with nothing asked of the user but the credit some of them need.
+#
+# Only two licences are accepted: CC0 (public domain dedication; no credit needed) and CC BY (a
+# credit, carried in `credit`, which the app hands the user at export). No NC, ND or SA: NC rules out
+# monetised videos, ND rules out syncing to a picture at all, SA would put the user's video under
+# the same licence. `src/scripts/music.py --check` holds the file to that, and to the fields below.
+#
+# Each track:
+#   id          the app's name for it; the mirror's file is <id>.mp3
+#   title, artist, mood, seconds
+#   licence     SPDX id; licence_url, its deed
+#   source      the page the track was taken from
+#   statement   where the rights holder says it is under that licence
+#   upstream    the file itself, at the source (the app's second place to fetch it)
+#   bytes, sha256   the file, verbatim; a download that is not these bytes is refused
+#   credit      the attribution a CC BY licence asks for, word for word; empty for CC0
+#   retrieved   when the licence and file were checked
+#
+# Komiku is the other name Loyalty Freak Music publishes under (the albums point at each other, and
+# the label that uploads Komiku's tracks is the artist's own), so that artist's FAQ is the statement
+# for both: their work is CC0, album by album as each album's page says.
+#
+# The files are mirrored, unchanged, in a public repository of their own,
+# github.com/CommanderWaterford/cutpoet-music-mirror, as tracks/<id>.mp3 (with a copy of this
+# file); `src/scripts/music.py --fetch` fills a checkout of it. The app asks the mirror first and
+# the upstream second, and never ships a track inside the APK.
+
+mirror = "https://raw.githubusercontent.com/CommanderWaterford/cutpoet-music-mirror/main/tracks/"
+
+[[track]]
+id = "go-to-the-picnic"
+title = "Go to the Picnic"
+artist = "Loyalty Freak Music"
+mood = "happy"
+seconds = 187
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.mp3"
+bytes = 7544987
+sha256 = "dbeaad7bb137f39f5d3e7ee5c83b2ac53f4963cc92f3d3fe6321c490e1760cf1"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "sweet-sun"
+title = "Sweet Sun"
+artist = "Loyalty Freak Music"
+mood = "happy"
+seconds = 119
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839/Loyalty_Freak_Music_-_04_-_Sweet_Sun.mp3"
+bytes = 4843926
+sha256 = "0e78c97159d005e5727fb8c406c1613047f17bfe74450d37e941dafbfe0975fa"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "yippee"
+title = "Yippee!"
+artist = "Loyalty Freak Music"
+mood = "happy"
+seconds = 130
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusicPOSITIVEATTITUDE20170920175908839/Loyalty_Freak_Music_-_08_-_Yippee_.mp3"
+bytes = 5270244
+sha256 = "6e227853ce8ef7094aa3847f62e8c032794ff45a46d5e3d510d69eccc8b6d564"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "carefree"
+title = "Carefree"
+artist = "Kevin MacLeod"
+mood = "happy"
+seconds = 205
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Carefree"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3"
+bytes = 6566713
+sha256 = "8433b770a630d9b1594fd484442c677907ece899a4d149954cd2e74fd733e311"
+credit = "\"Carefree\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
+
+[[track]]
+id = "sunglasses"
+title = "Sunglasses"
+artist = "Loyalty Freak Music"
+mood = "beats"
+seconds = 170
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON/Loyalty_Freak_Music_-_01_-_Sunglasses.mp3"
+bytes = 6884925
+sha256 = "c31c4c0888b8aba0cb5d4e4b521eeeb85ccb62e7fa7c496b1879d69a9211545c"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "friend-to-friend"
+title = "Friend to Friend"
+artist = "Loyalty Freak Music"
+mood = "beats"
+seconds = 163
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON/Loyalty_Freak_Music_-_02_-_Friend_to_friend.mp3"
+bytes = 6639374
+sha256 = "61f7d10b12f8c8688eab3bcd8b826e0d4155df4303195183b62c9c741cfc231b"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "walking-shoes"
+title = "Walking Shoes"
+artist = "Loyalty Freak Music"
+mood = "beats"
+seconds = 167
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON/Loyalty_Freak_Music_-_15_-_Walking_Shoes.mp3"
+bytes = 6786705
+sha256 = "e365e7403c7053214683eb562521022651e3aa8b4e9bff9dc221572d16f71a85"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "beach"
+title = "Beach"
+artist = "Loyalty Freak Music"
+mood = "beats"
+seconds = 161
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusicMELODIESWITHABEAT2018030251947223"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusicMELODIESWITHABEAT2018030251947223/Loyalty_Freak_Music_-_08_-_Beach.mp3"
+bytes = 6503266
+sha256 = "f16e2eb58fa48fb00aa47192d8159c2c952d3d538ceec7bef3f79ee49db58724"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "shoepop"
+title = "Shoepop"
+artist = "Loyalty Freak Music"
+mood = "beats"
+seconds = 164
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusicMELODIESWITHABEAT2018030251947223"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusicMELODIESWITHABEAT2018030251947223/Loyalty_Freak_Music_-_09_-_Shoepop.mp3"
+bytes = 6630743
+sha256 = "bad6656f1380801b5aba1341ea60af8c6ae93ca2c90f25afc50754eb2ce2ccd5"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "aeroplane"
+title = "Aeroplane"
+artist = "Loyalty Freak Music"
+mood = "chill"
+seconds = 134
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/loyalty-freak-music-lofi-ambient-songs"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/loyalty-freak-music-lofi-ambient-songs/Loyalty%20Freak%20Music%20-%20LOFI%20AMBIENT%20SONGS%20%21%20-%2003%20Lack%20of%20Color%20-%20Aeroplane.mp3"
+bytes = 5456004
+sha256 = "eeabd714c524b4f8b206463ab4b836aaf5d2a17fca36578c9f179cb3026d3acb"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "sugar-and-coffee"
+title = "Sugar and Coffee"
+artist = "Loyalty Freak Music"
+mood = "chill"
+seconds = 107
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/loyalty-freak-music-lofi-ambient-songs"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/loyalty-freak-music-lofi-ambient-songs/Loyalty%20Freak%20Music%20-%20LOFI%20AMBIENT%20SONGS%20%21%20-%2008%20Lack%20of%20Color%20-%20Sugar%20and%20coffee.mp3"
+bytes = 4352548
+sha256 = "e78b083a8bb3a81e86c7a294b44c1ce60b4edf9e3d81061f67d14eb72901e025"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "glad-you-are-here"
+title = "I'm Glad You Are Here with Me"
+artist = "Loyalty Freak Music"
+mood = "chill"
+seconds = 127
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/loyalty-freak-music-lofi-ambient-songs"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/loyalty-freak-music-lofi-ambient-songs/Loyalty%20Freak%20Music%20-%20LOFI%20AMBIENT%20SONGS%20%21%20-%2004%20Lack%20of%20Color%20-%20I%27m%20glad%20you%20are%20here%20with%20me.mp3"
+bytes = 5154813
+sha256 = "d5f815958d110fd81b305aecd2aae708a6239c858e7ae369c22e4b95b1956cc8"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "happy-sadie"
+title = "Happy Sadie"
+artist = "Loyalty Freak Music"
+mood = "chill"
+seconds = 147
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/loyalty-freak-music-chill-for-real"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/loyalty-freak-music-chill-for-real/Loyalty%20Freak%20Music%20-%20CHILL%20FOR%20REAL%20%21%20-%2002%20Happy%20Sadie.mp3"
+bytes = 5952264
+sha256 = "c46645ea14e70f71d6502fe59b4e3122cd677c867ca179ac1ea95a623580b259"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "soft-as-a-dry-pillow"
+title = "Soft as a Dry Pillow"
+artist = "Loyalty Freak Music"
+mood = "chill"
+seconds = 182
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/loyalty-freak-music-chill-for-real"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/loyalty-freak-music-chill-for-real/Loyalty%20Freak%20Music%20-%20CHILL%20FOR%20REAL%20%21%20-%2005%20Soft%20as%20a%20dry%20pillow.mp3"
+bytes = 7369535
+sha256 = "45967a67fad2bce9176222ce4fd4462b1bdf7f3bbeed44431c2844c2b69aebd9"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "cliff-road-chill"
+title = "Cliff Road Chill"
+artist = "Komiku"
+mood = "chill"
+seconds = 88
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/komiku-cliff-road-chill"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/komiku-cliff-road-chill/Komiku%20-%20Cliff%20Road%20Chill.mp3"
+bytes = 3616568
+sha256 = "951fa99da7736c9a9204d9c47611718d971be43030bdf3db2ade797417cace42"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "wallpaper"
+title = "Wallpaper"
+artist = "Kevin MacLeod"
+mood = "chill"
+seconds = 220
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Wallpaper"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3"
+bytes = 8804339
+sha256 = "9fa810e5193c88f1b360537366f210f16c2588106d5292f0659e9957fa274f96"
+credit = "\"Wallpaper\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
+
+[[track]]
+id = "walk-in-the-forest"
+title = "Walk in the Forest"
+artist = "Komiku"
+mood = "cinematic"
+seconds = 272
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/komiku-a-tale-is-never-forgotten"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/komiku-a-tale-is-never-forgotten/Komiku%20-%20A%20Tale%20is%20never%20forgotten%20-%2004%20Walk%20in%20the%20forest.mp3"
+bytes = 10966589
+sha256 = "3b1dcdcd5a97033366628115839849560d513ae0e0146eed1a6732c5b986c6cc"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "action-discovery"
+title = "Discovery"
+artist = "Komiku"
+mood = "cinematic"
+seconds = 100
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/Komiku-the_binge_watchers"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/Komiku-the_binge_watchers/Komiku_-_12_-_Action_Discovery.mp3"
+bytes = 4099352
+sha256 = "52cb709bba8ad8a1d2f27f287e1fe252a29f6b62cafa4acf8b518901e279cc69"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "ambiant-wait"
+title = "Wait"
+artist = "Komiku"
+mood = "cinematic"
+seconds = 105
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/Komiku-the_binge_watchers"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/Komiku-the_binge_watchers/Komiku_-_16_-_Ambiant_Wait.mp3"
+bytes = 4294748
+sha256 = "8ba5bc9d77a95a8d309079668cd66707997902fb297f387be5122b80ffc84470"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "investigations"
+title = "Investigations"
+artist = "Kevin MacLeod"
+mood = "cinematic"
+seconds = 94
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Investigations"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Investigations.mp3"
+bytes = 3745876
+sha256 = "699f7a3cd227dfe5c1e88099b45af57202bfe9d56f86b8b43e4252b65dd96768"
+credit = "\"Investigations\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
+
+[[track]]
+id = "the-main-reason-we-cry"
+title = "The Main Reason We Cry So Much"
+artist = "Komiku"
+mood = "emotional"
+seconds = 187
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/komiku-a-tale-is-never-forgotten"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/komiku-a-tale-is-never-forgotten/Komiku%20-%20A%20Tale%20is%20never%20forgotten%20-%2014%20The%20main%20reason%20we%20cry%20so%20much.mp3"
+bytes = 7566491
+sha256 = "c44e3eb74e2871b888627432bf0dcd4763b6e3bd51bf1bed7892b084c87919f2"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "hope-and-love"
+title = "Hope and Love"
+artist = "Loyalty Freak Music"
+mood = "emotional"
+seconds = 262
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/LoyaltyFreakMusic-INSTRUMENTALRBBEATSTOSINGORRAPON/Loyalty_Freak_Music_-_16_-_Hope_and_Love.mp3"
+bytes = 10564011
+sha256 = "d28e4a356dd8a5e7e5ebe49ed32f893fa98938e63d46fddb69db44e5c03a5cf7"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "action-chasing"
+title = "Chasing"
+artist = "Komiku"
+mood = "action"
+seconds = 83
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/Komiku-the_binge_watchers"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/Komiku-the_binge_watchers/Komiku_-_04_-_Action_Chasing.mp3"
+bytes = 3420169
+sha256 = "a0a060560422f232fa9de9eb7e5c22f7ce8ef8bbcba8c15aeb76a5e8aece81f8"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "action-time-attack"
+title = "Time Attack"
+artist = "Komiku"
+mood = "action"
+seconds = 128
+licence = "CC0-1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+source = "https://archive.org/details/Komiku-the_binge_watchers"
+statement = "https://loyaltyfreakmusic.com/faq/"
+upstream = "https://archive.org/download/Komiku-the_binge_watchers/Komiku_-_02_-_Action_Time_Attack_Research.mp3"
+bytes = 5228887
+sha256 = "aa252ea77a53056ca35e19bb7233db0f0894d32914c70e8406d9a56a1569fe89"
+credit = ""
+retrieved = "2026-10-19"
+
+[[track]]
+id = "local-forecast-elevator"
+title = "Local Forecast – Elevator"
+artist = "Kevin MacLeod"
+mood = "funny"
+seconds = 189
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Local+Forecast+-+Elevator"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Local%20Forecast%20-%20Elevator.mp3"
+bytes = 7570404
+sha256 = "8c46b44e65324bc339fbbc3e770611d671f6c74a40f3ec8dd50332c082b25cc9"
+credit = "\"Local Forecast – Elevator\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
+
+[[track]]
+id = "sneaky-snitch"
+title = "Sneaky Snitch"
+artist = "Kevin MacLeod"
+mood = "funny"
+seconds = 137
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Sneaky+Snitch"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sneaky%20Snitch.mp3"
+bytes = 5466943
+sha256 = "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884"
+credit = "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
+
+[[track]]
+id = "fluffing-a-duck"
+title = "Fluffing a Duck"
+artist = "Kevin MacLeod"
+mood = "funny"
+seconds = 67
+licence = "CC-BY-4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+source = "https://incompetech.com/music/royalty-free/index.html?isrc=&Search=Search&keywords=Fluffing+a+Duck"
+statement = "https://incompetech.com/music/royalty-free/licenses/"
+upstream = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluffing%20a%20Duck.mp3"
+bytes = 2696840
+sha256 = "cb23b1833c35e391de10d998d6a40cfc760565ce31d23014c86025523ca8239b"
+credit = "\"Fluffing a Duck\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+retrieved = "2026-10-19"
