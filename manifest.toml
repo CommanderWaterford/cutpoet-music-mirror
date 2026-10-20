@@ -1,30 +1,9 @@
-# The music the app's library offers: every track free to put in a video, posted anywhere, earning
-# money, with nothing asked of the user but the credit some of them need.
+# cutpoeta's music library: every track free to put in a video, posted anywhere, earning money,
+# with nothing asked but the credit the CC BY tracks need (`credit`, word for word; empty for CC0).
+# Only CC0 and CC BY are taken: never NC, ND or SA.
 #
-# Only two licences are accepted: CC0 (public domain dedication; no credit needed) and CC BY (a
-# credit, carried in `credit`, which the app hands the user at export). No NC, ND or SA: NC rules out
-# monetised videos, ND rules out syncing to a picture at all, SA would put the user's video under
-# the same licence. `src/scripts/music.py --check` holds the file to that, and to the fields below.
-#
-# Each track:
-#   id          the app's name for it; the mirror's file is <id>.mp3
-#   title, artist, mood, seconds
-#   licence     SPDX id; licence_url, its deed
-#   source      the page the track was taken from
-#   statement   where the rights holder says it is under that licence
-#   upstream    the file itself, at the source (the app's second place to fetch it)
-#   bytes, sha256   the file, verbatim; a download that is not these bytes is refused
-#   credit      the attribution a CC BY licence asks for, word for word; empty for CC0
-#   retrieved   when the licence and file were checked
-#
-# Komiku is the other name Loyalty Freak Music publishes under (the albums point at each other, and
-# the label that uploads Komiku's tracks is the artist's own), so that artist's FAQ is the statement
-# for both: their work is CC0, album by album as each album's page says.
-#
-# The files are mirrored, unchanged, in a public repository of their own,
-# github.com/CommanderWaterford/cutpoet-music-mirror, as tracks/<id>.mp3 (with a copy of this
-# file); `src/scripts/music.py --fetch` fills a checkout of it. The app asks the mirror first and
-# the upstream second, and never ships a track inside the APK.
+# Komiku is the other name Loyalty Freak Music publishes under, so that artist's FAQ is the
+# statement for both. `bytes` and `sha256` are the file in tracks/<id>.mp3, verbatim.
 
 mirror = "https://raw.githubusercontent.com/CommanderWaterford/cutpoet-music-mirror/main/tracks/"
 

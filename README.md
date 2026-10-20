@@ -1,10 +1,10 @@
-# Cuttix music mirror
+# cutpoeta music mirror
 
-The tracks in [Cuttix](https://cuttix.com)'s music library, mirrored unchanged from where they were
-found, so the app can fetch them from one place that does not move. The app asks here first and the
-original source second, and keeps a file only if it is the exact bytes (SHA-256) the library's
-manifest names: [`manifest.toml`](manifest.toml), a copy of `music/manifest.toml` in the app's
-repository, where the list is kept and checked.
+The tracks in [cutpoeta](https://cutpoeta.com)'s music library, mirrored unchanged from where they
+were found, so the app can fetch them from one place that does not move. The app asks here first and
+the original source second, and keeps a file only if it is the exact bytes (SHA-256) listed in
+[`manifest.toml`](manifest.toml), which also records each track's licence, source and the rights
+holder's own statement of that licence.
 
 Every track here is free to use in any video, monetised ones included:
 
@@ -14,8 +14,8 @@ Every track here is free to use in any video, monetised ones included:
 - **CC BY 4.0**: Kevin MacLeod ([incompetech.com](https://incompetech.com)). A video using one of
   these tracks must carry its credit (below); the app hands it to the user when they export.
 
-Nothing here is the app, and this repository claims no rights over any track: each keeps the licence
-it arrived under, and a file here is a verbatim copy, never a modification.
+This repository holds only the music, not the app. It claims no rights over any track: each keeps
+the licence it arrived under, and a file here is a verbatim copy, never a modification.
 
 ## Tracks
 
@@ -85,14 +85,4 @@ http://creativecommons.org/licenses/by/4.0/
 "Fluffing a Duck" Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
-```
-
-## Updating
-
-Change `music/manifest.toml` in the app's repository first (`src/scripts/music.py --check` must
-pass), then fill a checkout of this repository from it and commit:
-
-```sh
-python3 src/scripts/music.py --fetch /path/to/cutpoet-music-mirror/tracks
-cp music/manifest.toml /path/to/cutpoet-music-mirror/
 ```
